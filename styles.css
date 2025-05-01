@@ -21,14 +21,32 @@ body {
   line-height: 1.6;
 }
 
+/*body {
+    background-image: url('pexels-karolina-grabowska-4468011.jpg');
+    background-size: cover;       /
+    background-position: center;  /* Centralizar a imagem 
+    background-repeat: no-repeat; /* Não repetir 
+    background-attachment: fixed; /* Fixar ao rolar a página (opcional) 
+    margin: 0;                   /* Remover margens padrão 
+    min-height: 100vh;           /* Garantir altura mínima da tela 
+  }*/
+
 body {
     background-image: url('pexels-karolina-grabowska-4468011.jpg');
-    background-size: cover;       /* Cobrir toda a área */
-    background-position: center;  /* Centralizar a imagem */
-    background-repeat: no-repeat; /* Não repetir */
-    background-attachment: fixed; /* Fixar ao rolar a página (opcional) */
-    margin: 0;                   /* Remover margens padrão */
-    min-height: 100vh;           /* Garantir altura mínima da tela */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  /* Ajuste para celulares */
+@media (max-width: 768px) {
+    body {
+      background-size: contain; /* ou cover com zoom menor */
+      background-position: top center; /* Alinhar ao topo */
+    }
   }
 
 
@@ -69,7 +87,7 @@ header h2 {
 }
 
 .titulo-header {
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
     text-shadow: 
        0 0 10px black,
@@ -77,7 +95,7 @@ header h2 {
 }
  
 .subtitulo-header {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
