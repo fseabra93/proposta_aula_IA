@@ -32,7 +32,7 @@ body {
   }*/
 
 body {
-    background-image: url('pexels-karolina-grabowska-4468011.jpg');
+    background-image: url('pexels-pixelcop-2680270.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ header h2 {
 }
 
 .titulo-header {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     text-shadow: 
        0 0 10px black,
@@ -118,6 +118,12 @@ section {
 h2 {
   color: var(--accent-color);
   margin-top: 0;
+}
+
+.destaque-disciplina {
+    font-size: 1.4rem; /* ou 22px, 150%, etc. */
+    font-weight: bold; /* Reforça o negrito (opcional) */
+    color: #333; /* Cor personalizada (opcional) */
 }
 
 ul, ol {
