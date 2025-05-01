@@ -1,0 +1,15 @@
+name: Deploy Static HTML
+
+on:
+  push:
+    branches: ["main"]  # Dispara o deploy ao fazer push na branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4       # Baixa o repositório
+      - uses: actions/upload-pages-artifact@v2  # Prepara os arquivos
+        with:
+          path: '.'  # Usa a raiz do repositório (ou substitua por './docs' se os arquivos estiverem na pasta /docs)
+      - uses: actions/deploy-pages@v3    # Publica no GitHub Pages
