@@ -2,14 +2,17 @@ name: Deploy Static HTML
 
 on:
   push:
-    branches: ["main"]  # Dispara o deploy ao fazer push na branch main
+    branches: ["main"]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write  # Permissão específica para GitHub Pages
+      id-token: write  # Necessário para autenticação
     steps:
-      - uses: actions/checkout@v4       # Baixa o repositório
-      - uses: actions/upload-pages-artifact@v2  # Prepara os arquivos
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v2
         with:
-          path: '.'  # Usa a raiz do repositório (ou substitua por './docs' se os arquivos estiverem na pasta /docs)
-      - uses: actions/deploy-pages@v3    # Publica no GitHub Pages
+          path: '.'
+      - uses: actions/deploy-pages@v3
